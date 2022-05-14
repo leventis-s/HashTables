@@ -1,0 +1,66 @@
+Q1:
+
+The successful lookup time is about the same for both algorithms,
+but should in the long run take longer for linear probing.
+This is because in linear probing, an element can be anywhere
+in the table. However, Robinhood hashing limits the distance
+it can be away from its ideal slot.
+
+
+Q2:
+
+The run time for unsuccessful lookups is about the same at
+the beginning. However, as the load factor increases, the run
+time for linear probing increases exponentially, which Robinhood
+stays approximately the same. This is becuause while Robinhood
+can stop searching once the given element's distance is
+greater than the element being checked, linear probing must
+continue on.
+
+Q3:
+
+Successful insertion for Robinhood takes slightly longer
+than successful insertion for linear probing. It also
+slightly increases as the load factor increases. This is
+becuase when Robinhood inserts an element, it must
+shift all the following elements down.
+
+
+Q4:
+
+The run time for unsuccessful insertions should be about
+the same. This is because both algorithms simply must
+check if the hash table is full.
+
+
+Q5:
+
+Successful deletions is faster for linear probing than for
+Robinhood. This is because while linear probing simply making
+the deleted element's type into tombstone, Robinhood hashing
+must shift the following elements up (if need be).
+
+
+Q6:
+
+Unsuccessful deletions should have a faster run time with Robinhood
+because they both iterate through the table and find that
+the element is not contained. Becuase Robinhood is faster at this
+it must be faster at unsuccessful deletions. The runtime will
+slightly increase as the load factor increases.
+
+
+Q7:
+
+This would not be a good idea because it would allocate a lot
+of space for something that does not need that much.
+
+
+Q8:
+
+I believe Robinhood hashing is the best for overall use.
+Although it can be slower with insertion or removal, it
+is much faster for lookups.
+
+
+
